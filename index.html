@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Cloud Demo</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multi-Cloud Architecture</h1>
+  <h3>Frontend: AWS S3 | Backend: Azure Function</h3>
+
+  <button onclick="callAzure()">Call Azure Function</button>
+  <p id="response">Waiting for response...</p>
+
+  <script>
+    async function callAzure() {
+      try {
+        const res = await fetch("https://awsbackendfunction-ederbff2eycwhybq.canadacentral-01.azurewebsites.net/api/awsResponder?code=xeYLzbnFNGkm9OOtH-EDEJoMMTGHSA2DQiSCIpqSJOKyAzFuIx3L7w==");
+        const text = await res.text();
+        document.getElementById("response").innerText = text;
+      } catch (error) {
+        document.getElementById("response").innerText = "Error: " + error;
+      }
+    }
+  </script>
+</body>
+</html>
