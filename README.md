@@ -46,3 +46,5 @@ To replicate or run this multi-cloud application, the following steps are essent
 This demonstration effectively illustrates the power and flexibility of a multi-cloud strategy, enabling developers to select the best-of-breed services from different providers to build robust and scalable applications.
 
 ## OUTPUT
+
+<img width="1919" height="1003" alt="Image" src="https://github.com/user-attachments/assets/f03d3b66-58e8-4dec-9033-708a23990b06" />
